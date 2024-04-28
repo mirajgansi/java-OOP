@@ -1,7 +1,7 @@
 public class Varialbe {
 
     /*Instance variable 
-    *Will eed object to acess this variable
+    *Will seed object to acess this variable
     *Not shared between the object
     */
 
@@ -45,7 +45,7 @@ public class Varialbe {
 
         String stringValue="Thi is a String vaue";
         // use class
-        String stringValue2= new String(original: " This string uses class");
+        String stringValue2= new String( " This string uses class");
         System.out.println(stringValue2);
         // Obect, for this we can use the same public class made
         Varialbe varialbeObject= new Varialbe();

@@ -18,7 +18,8 @@ public class InputOutpur {
         System.out.printf("The number is %d", 10);
         /*can use multiple formatter */
         System.out.printf("\n The floating %f an boolean %b",3f,false);
-        System.out.println("hello");
+    
+        System.out.println("hello 2");
         /*user Input
          * import java.util.Scanner; // copy this line at the top of the code 
          */

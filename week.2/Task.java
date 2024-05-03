@@ -1,4 +1,4 @@
-// Task To Do
+
 
 import java.util.Scanner;
 
@@ -155,13 +155,13 @@ System.out.print("Enter the side of the square: ");
         System.out.println("Volume of the cuboid: " + volumeCuboid);
 
 // 9.  Ask user to give two double input for length and breadth of a rectangle and print area type casted to int.
-System.out.print("Enter the length of the rectangle: ");
-        double  length = scanner.nextDouble();
+        System.out.print("Enter the length of the rectangle: ");
+        double  length1 = scanner.nextDouble();
         System.out.print("Enter the breadth of the rectangle: ");
-        double breadth = scanner.nextDouble();
+        double breadth1 = scanner.nextDouble();
 
         // Calculate area of the rectangle
-        double area = length * breadth;
+        double area = length1 * breadth1;
 
         // Type cast area to int and print
         int areaInt = (int) area;
@@ -190,28 +190,17 @@ System.out.print("Enter marks for subject 1: ");
         // Calculate percentage
         double percentage = (totalMarks / 4.0);
 
-        // Determine the grade based on percentage
-        String grade;
-        if (percentage >= 90) {
-            grade = "A";
-        } else if (percentage >= 80) {
-            grade = "B";
-        } else if (percentage >= 70) {
-            grade = "C";
-        } else if (percentage >= 60) {
-            grade = "D";
-        } else {
-            grade = "E";
-        }
+        // Determine the final result based on the percentage
+        String result1 = (percentage >= 70) ? "First Class" :
+                        (percentage > 59) ? "Upper Second Class" :
+                        (percentage > 49) ? "Second Class" :
+                        (percentage > 39) ? "Third Class" : "Fail";
 
-        // Print the total marks, percentage, and grade
+        // Print total marks, percentage, and final result
         System.out.println("Total marks: " + totalMarks);
         System.out.println("Percentage: " + percentage);
-        System.out.println("Grade: " + grade);
+        System.out.println("Result: " + result1);
 
-
-
-// Hint: Use ternary operator
 scanner.close();
 }
 }

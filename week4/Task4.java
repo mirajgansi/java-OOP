@@ -58,7 +58,7 @@ for (int i=1;i<=4;i++){
     System.out.println();
 }
 
-// 5. Modify the above program by using a do..while loop so that it provides the user with the option to continue running the program and enter more inputs. For example:
+// 5. Modify the above program by using a do..while loop so that it provides the user with the option to continue running the program and enter more scans. For example:
 
 // Sample Run:
 
@@ -78,12 +78,12 @@ for (int i=1;i<=4;i++){
 
 // n.
 
-     Scanner input = new Scanner(System.in);
+     Scanner scan = new Scanner(System.in);
         char choice;
 
         do {
             System.out.print("Enter a positive non-zero integer: ");
-            int n = input.nextInt();
+            int n = scan.nextInt();
             int sum = 0;
 
             for (int i = 1; i <= n; i++) {
@@ -92,7 +92,7 @@ for (int i=1;i<=4;i++){
 
             System.out.println("Sum of 1 to " + n + " is " + sum);
             System.out.print("Do you want to continue? Enter 'y' for yes or any other character for no: ");
-            choice = input.next().charAt(0);
+            choice = scan.next().charAt(0);
         } while (choice == 'y' || choice == 'Y');
 
         
@@ -124,40 +124,35 @@ for (int i = 1; i <= 5; i++) {
 // 7. Write a program to calculate the HCF of Two given numbers.
 
 System.out.print("Enter the first number: ");
-int num1 = input.nextInt();
+int num1 = scan.nextInt();
 
 System.out.print("Enter the second number: ");
-int num2 = input.nextInt();
+int num2 = scan.nextInt();
 
 int hcf = calculateHCF(num1, num2);
 System.out.println("The HCF of " + num1 + " and " + num2 + " is " + hcf);
 
 
-}
 
-public static int calculateHCF(int a, int b) {
-if (b == 0) {
-    return a;
-} else {
-    return calculateHCF(b, a % b);
-}
-// 8. Write a program that prompts the user to input an integer and then outputs the number with the digits reversed. For example, if the input is 12345, the output should be 54321.
+
+
+// 8. Write a program that prompts the user to scan an integer and then outputs the number with the digits reversed. For example, if the scan is 12345, the output should be 54321.
 
 
 System.out.print("Enter an integer: ");
-int number = input.nextInt();
+int number = scan.nextInt();
 
 int reversedNumber = reverseDigits(number);
 
 System.out.println("Reversed number: " + reversedNumber);
 
 
-}
+
 
 
 // 9. 
         System.out.print("Enter an integer: ");
-        int number1 = input.nextInt();
+        int number1 = scan.nextInt();
 
         int reversedNumber1= reverseDigits(number1);
 
@@ -165,7 +160,7 @@ System.out.println("Reversed number: " + reversedNumber);
    
 // 10. Write a program that asks the user for a positive nonzero integer value. The program should use a loop to get the sum of all the integers from 1 up to the number entered. For example, if the user enters 50, the loop will find the sum of 1+2+3+4+….+50.
     System.out.print("Enter a positive non-zero integer: ");
-        int number2 = input.nextInt();
+        int number2 = scan.nextInt();
 
         int sum = 0;
         for (int i = 1; i <= number2; i++) {
@@ -174,7 +169,7 @@ System.out.println("Reversed number: " + reversedNumber);
 
         System.out.println("Sum of 1 to " + number2 + " is " + sum);
 
-        input.close();
+        scan.close();
     }  
     public static int reverseDigits(int number) {
         int reversedNumber = 0;
@@ -198,4 +193,12 @@ System.out.println("Reversed number: " + reversedNumber);
         }
             return reversedNumber1;
    }
+   public static int calculateHCF(int a, int b) {
+    if (b == 0) {
+        return a;
+    } else {
+        return calculateHCF(b, a % b);
+    }
+    }
 
+}

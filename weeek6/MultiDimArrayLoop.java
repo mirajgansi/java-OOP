@@ -41,11 +41,11 @@ public class MultiDimArrayLoop {
              * Anser should be 1
              */
             String[][]names= new String[2][3];
-            String[][]names={
+            String[][]name={
             {"Sansakriti","Nikita","Anji"},
             { "Miraj","Niraj","Oskar"}
             };
-            int namesLenght= names.length;
+            int namesLenght= name.length;
             for(int outer=0;outer<namesLenght;outer++){
                 System.out.println("Names in array"+outer);
                 int innerLenght=names[outer].length;

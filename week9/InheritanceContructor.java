@@ -64,7 +64,7 @@ void nameDifference(String name){
 class pant{
     String texture;
     String color;
-    pant(string texture, String color ){
+    pant(String texture, String color ){
         this.texture=texture;
         this.color= color;
         
